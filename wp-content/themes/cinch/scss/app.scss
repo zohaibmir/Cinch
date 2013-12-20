@@ -1,0 +1,364 @@
+@import "settings";
+@import "foundation";
+
+@font-face {
+    font-family: 'texgyreadventorregular';
+    src: url('../fonts/texgyreadventor-regular-webfont.eot');
+    src: url('../fonts/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('../fonts/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('../fonts/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue.ttf');	
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hvt';
+    src: url('../fonts/hvt.eot');	
+    src: url('../fonts/hvt.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/hvt.woff') format('woff'),
+         url('../fonts/hvt.ttf') format('truetype'),
+         url('../fonts/hvt.svg#hvt') format('svg');
+		 font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaneue-light-webfont';
+    src: url('../fonts/helveticaneue-light-webfont.eot');	
+    src: url('../fonts/helveticaneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneue-light-webfont.woff') format('woff'),
+         url('../fonts/helveticaneue-light-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneue-light-webfont.svg#helveticaneue-light-webfont') format('svg');
+		 font-weight: normal;
+    font-style: normal;
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;    
+    
+}
+body {
+    min-height: 100%;
+    overflow:hidden;
+    font-family: "Helvetica Neue",  Arial, "Lucida Grande", sans-serif;
+}
+
+h1,h2,h3,h4,h5 {
+        font-family: 'texgyreadventorregular';
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+
+
+h1 {
+	font-size: 45px;	
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'hvt';
+}
+
+p {
+ margin-bottom:10px;
+}
+
+.text-header {
+    font-family: 'hvt';    
+    color: #221f1f;
+    font-size: 55px;
+
+}
+
+.text-header2{
+ font-family: 'helveticaneue-light-webfont';    
+    color: #221f1f;
+}
+#header {    
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    background: url('../images/bg_header.png') no-repeat 0 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-box-shadow: #979797 0px 2px 3px;
+    -moz-box-shadow: #979797 0px 2px 3px;
+    box-shadow: #979797 0px 2px 3px;
+}
+
+.logo {
+    line-height:3.2;
+    verticle-align:middle;   
+}
+
+.top-nav {
+    width:100%;    
+}
+.top-nav .nav {   
+    display: block;
+    width:auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;    
+    float:right;  
+    max-height:54px;
+}   
+
+.top-nav .nav li{
+   display: inline-block;    
+    overflow:hidden;    
+    vertical-align: middle;
+    line-height:54px;
+    white-space: pre-wrap;  
+    padding-left:emCalc(15);
+    padding-right:emCalc(15);
+    margin-right: -4px;
+}
+.top-nav .nav li:last-child  {
+       padding-right:emCalc(0);
+}
+.top-nav .nav li a{    
+    color:#000;       
+    text-transform: uppercase;    
+    font-size: 16px;
+    font-family: 'helveticaneue-light-webfont';
+
+}
+
+.top-nav .nav li:first-child{
+	display: none;
+}
+
+.top-nav .nav li:hover,
+.top-nav .nav li.active {
+	background: url('../images/bg_menu.png') repeat;
+	text-decoration: none;
+}
+
+.bg-page {
+background: url('../images/bg.png') center center no-repeat fixed; 	  
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 100%;
+height: 100%;
+position: fixed;
+left: 0;
+top: 0;
+z-index: -500;
+}
+
+.bg-page-2 {
+    background: url('../images/bg2.png') center no-repeat fixed; 	  
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: none;
+}
+
+#home {
+/* background: url('../images/bg.png') center center no-repeat fixed; 	  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+*/
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  position:relative;
+  article {
+	  position: absolute;
+	  z-index: 1;	
+	  width: 100%;
+          min-height: 100%;          
+	  top:emCalc(0);
+          padding-top:emCalc(0);
+	}
+}
+
+#ourapp, #retailers,#service, #sdk, #contact  {
+/*  background: url('../images/bg2.png') center no-repeat fixed; 	  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+*/
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  position:relative;
+  article {
+	  position: absolute;
+	  z-index: 1;	
+	  width: 100%;
+          min-height: 100%;          
+	  top:emCalc(0);
+          padding-top:emCalc(0);
+	}
+}
+
+.vcentere-content,.vcentere-content1 {    
+    display: table;
+    position:relative;
+    width:100%;   
+    table-layout: fixed;
+    }
+.fixed-div {        
+    display: table;
+    position:fixed;      
+    table-layout: fixed;
+    top:0;
+    }
+
+.time-line-centred-img {
+    overflow: no-content;
+    display: table-cell;
+    vertical-align: middle;   
+    background: url(../images/line.png) center center repeat-y;     
+    background-size:4px 100%;
+    background-position:center center; 
+    z-index:-1;
+    padding-top:emCalc(50px);
+    padding-bottom:emCalc(100px);    
+}
+
+.time-line-centred-img1 {    
+    display: table-cell;
+    vertical-align: middle;   
+    background: url(../images/line.png) center center repeat-y;     
+    background-size:4px 100%;
+    background-position:center center; 
+    z-index:-1;
+    padding-top:emCalc(0px);
+    padding-bottom:emCalc(0px)
+    
+ }   
+.center-img {
+  display: table-cell;
+  vertical-align: middle;   
+   
+  z-index:1;     
+border:solid thin red;
+}
+#home-text img {
+    width:100%;
+    text-align:center;
+}
+.text {
+       display: table-cell;
+       vertical-align: middle; 
+       font-size:12px;       
+       padding-top:emCalc(100px);
+    }
+
+.text-list {    
+    font-size:12px;       
+    font-family: 'helveticaneue-light-webfont';
+}
+.text-list li{
+    list-style-image: url('../images/ico_dot.png');
+}
+.text p {
+    font-family: 'helveticaneue-light-webfont';
+   font-size:12px;
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+.text-header {
+	font-size: 40px;
+        text-align:center;
+} 
+#home-center {
+    
+}
+.row {
+    padding-left:emCalc(10) !important;
+    padding-right:emCalc(10)!important;    
+}
+.top-nav .nav li{
+    padding-left:emCalc(10);
+    padding-right:emCalc(10);    
+}
+
+ .top-nav .nav li:last-child  {
+       padding-right:emCalc(5);
+}
+}
+
+@media only screen  and (max-width: 40em){ 
+
+
+    body {
+    min-height: 100%;
+    font-family: "Helvetica Neue",  Arial, "Lucida Grande", sans-serif;
+    font-size:8px;
+}
+
+.top-bar {
+    opacity:0.2;
+}
+    .text-header {
+            font-size: 20px;
+            text-align:center;
+    } 
+
+    h2 {
+        font-size:15px;       
+    }
+    #home-center {
+    
+    }
+
+    .logo {
+        line-height:1;
+        verticle-align:middle;      
+    }
+    .logoimg {
+        height:44px;
+    }
+
+    .row {
+        padding-left:emCalc(10) !important;
+        padding-right:emCalc(10)!important;    
+    }
+
+
+    .text {
+       display: table-cell;
+       vertical-align: middle; 
+       /*font-size:8px;       */
+       padding-top:emCalc(100px);
+    }
+
+.text-list {    
+    /*font-size:8px;       */
+    font-family: 'helveticaneue-light-webfont';
+}
+.text-list li{
+    list-style-image: url('../images/ico_dot.png');
+}
+.text p {
+    font-family: 'helveticaneue-light-webfont';
+   /*font-size:8px;*/
+}
+}

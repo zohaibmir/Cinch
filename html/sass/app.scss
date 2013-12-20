@@ -1,0 +1,288 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "foundation/components/global"; // *always required
+// @import "foundation/components/grid";
+
+//
+// Use this grid if you want to start using the new Foundation 5 grid early.
+// It will change breakpoints to min-width: 640px and 1024px.
+//
+// @import "foundation/components/grid-5";
+//
+
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/type";
+// @import "foundation/components/buttons";
+// @import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+// @import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100%;
+    font-family: "Helvetica Neue",  Arial, "Lucida Grande", sans-serif;
+}
+
+#top-bar {
+    width:100%;
+    background-color:#646464;
+    max-height:emCalc(60);
+    position:fixed;
+    z-index:2;
+}
+.logo {
+    line-height:3.2;
+    verticle-align:middle;   
+}
+.top-nav {
+    width:100%;
+}
+.top-nav .nav {
+   
+    display: block;
+    width:auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    float:right;
+    line-height:4;
+    vertical-align: middle;
+}
+
+.top-nav .nav li{
+    display: inline-block;    
+    overflow:hidden;    
+    vertical-align: middle;
+    line-height:1.5;
+    white-space: pre-wrap;  
+    padding-left:emCalc(20);
+    padding-right:emCalc(20);
+    
+}
+.top-nav .nav li:last-child  {
+       
+}
+.top-nav .nav li a{
+    color:#FFFFFF;       
+}
+
+.top-nav .nav li .ellipse {
+    display: inline-block;
+    background: url('../img/ellipse.png') no-repeat;  
+    height:emCalc(8);
+    width:emCalc(8);
+}
+
+.top-nav .nav li.active .ellipse {
+    display: inline-block;
+    background: url('../img/ellipse-active.png') no-repeat;  
+    height:emCalc(8);
+    width:emCalc(8);
+}
+
+#cinch,#business, #contact,#people, #ourapp  {
+  background: url(../img/bg1.png) center no-repeat fixed; 	  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  position:relative;
+  article {
+	  position: absolute;
+	  z-index: 1;	
+	  width: 100%;
+	  top:emCalc(60);
+	}
+}
+
+
+#businesss {
+    background: url(../img/bg1.png) center no-repeat fixed; 	  
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  min-height: 100%;
+  width:100%;
+  position:relative;
+  article {
+	  position: absolute;
+	  z-index: 1;	
+	  width: 100%;
+	  padding-top:emCalc(60);
+	}
+}
+
+#hand-section {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.home-objects {        
+    width:64.84%;
+    float:right;
+    padding-right:9.77%;
+    text-align:right;  
+    padding-top:emCalc(100);  
+}
+
+.time-line-img1,.time-line-img3 {
+    width:35.16%;
+    float:left;
+    padding-left:12.70%;
+    
+}
+.time-line-img-content {    
+    display: table;
+    position:relative;
+   
+    
+}
+.time-line-centred-img1 {    
+    display: table-cell;
+    vertical-align: middle;   
+    background: url(../img/line.png) center center repeat-y;     
+    background-size:4px 100%;    
+    z-index:-1;
+}
+.time-line-centred-img {
+    display: table-cell;
+    vertical-align: middle;   
+    background: url(../img/line.png) center center repeat-y;     
+    background-size:4px 100%;
+    background-position:52% center; 
+    z-index:-1;
+}
+.object1 {
+    position:relative;
+    width:50%;
+    display: inline-block;
+    text-alight:right;    
+    float:left;
+    
+}
+.object2 {
+    position:relative;
+    width:50%;
+    display: inline-block;    
+    float:right;
+}
+.object1 img, .object2 img{
+    
+}
+.padding-zero {
+    padding:0;
+    
+}
+.social-shopping-text {
+    color:#221f1f;    
+    margin-top:100px;
+}
+
+.section-content {
+    display: table;
+    width:60.94%; 
+    float:right;    
+    padding-left:5%;
+    text-align:left;  
+    padding-top:emCalc(100);  
+}
+
+.section-content1 {
+    display: table;
+    width:60.94%; 
+    float:right;    
+    padding-left:5%;
+    text-align:left;  
+    padding-top:emCalc(100);  
+}
+.text {
+    display: block;
+    vertical-align: middle;   
+}
+.time-line-img,.time-line-img4 {    
+    width:39.06%;
+    float:left;
+    padding-left:7.8%;
+}
+
+
+.fix-div-container {
+    position: relative;
+    width: 1024px;
+    margin: auto auto;
+}
+.fix-div {
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+    width: inherit;;
+}
+
+.hide {
+    display:none !important;
+}
+.show {
+    display:block !important;
+}
+@media only screen 
+and (max-width: 767px) {
+    .logo {
+     padding-left: emCalc(10);
+     line-height:3.8;
+    verticle-align:middle; 
+}
+
+.social-shopping-text {
+    color:#221f1f;    
+    margin-top:50px;
+}
+}
+
+
