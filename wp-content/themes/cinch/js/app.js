@@ -293,7 +293,7 @@ $(document).ready(function() {
     var $body = $('#sdk-left'); //Cache this for performance   
     var setBodyScale = function() {
         var scaleSource = $body.width(),
-        scaleFactor = 0.35,                     
+        scaleFactor = 0.25,                     
         maxScale = 500,
         minScale = 40; //Tweak these values to taste
         if($(window).height() < 700) {
@@ -306,10 +306,11 @@ $(document).ready(function() {
         var fontSize = scaleSource * scaleFactor; //Multiply the width of the body by the scaling factor:        
         if (fontSize > maxScale) fontSize = maxScale;
         if (fontSize < minScale) fontSize = minScale; //Enforce the minimum and maximums
-
-        $('.text').css('font-size', fontSize + '%');
-        $('.text p').css('font-size', fontSize + '%');
-        $('.text ul').css('font-size', fontSize + '%');
+        if ($(window).width() < 900) {
+            $('.text').css('font-size', fontSize + '%');
+            $('.text p').css('font-size', fontSize + '%');
+            $('.text ul').css('font-size', fontSize + '%');
+        }
     //$('.text h2').css('font-size', fontSize + '%');
         
     }

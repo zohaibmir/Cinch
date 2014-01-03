@@ -7974,7 +7974,7 @@ p {
   padding-bottom: 0;
 }
 
-/* line 256, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 .center-img {
   display: table-cell;
   vertical-align: middle;
@@ -7982,103 +7982,103 @@ p {
   border: solid thin red;
 }
 
-/* line 263, ../scss/app.scss */
+/* line 266, ../scss/app.scss */
 #home-text img {
   width: 100%;
   text-align: center;
 }
 
-/* line 267, ../scss/app.scss */
+/* line 270, ../scss/app.scss */
 .text {
   display: table-cell;
   vertical-align: middle;
   font-size: 12px;
-  padding-top: 6.25rem;
+  padding-top: 3.75rem;
 }
 
-/* line 274, ../scss/app.scss */
+/* line 277, ../scss/app.scss */
 .text-list {
   font-size: 12px;
   font-family: 'helveticaneue-light-webfont';
 }
 
-/* line 278, ../scss/app.scss */
+/* line 281, ../scss/app.scss */
 .text-list li {
   list-style-image: url("../images/ico_dot.png");
 }
 
-/* line 281, ../scss/app.scss */
+/* line 284, ../scss/app.scss */
 .text p {
   font-family: 'helveticaneue-light-webfont';
   font-size: 12px;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 287, ../scss/app.scss */
+  /* line 290, ../scss/app.scss */
   .text-header {
     font-size: 40px;
     text-align: center;
   }
 
-  /* line 294, ../scss/app.scss */
+  /* line 297, ../scss/app.scss */
   .row {
     padding-left: 0.625rem !important;
     padding-right: 0.625rem !important;
   }
 
-  /* line 298, ../scss/app.scss */
+  /* line 301, ../scss/app.scss */
   .top-nav .nav li {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
   }
 
-  /* line 303, ../scss/app.scss */
+  /* line 306, ../scss/app.scss */
   .top-nav .nav li:last-child {
     padding-right: 0.3125rem;
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 311, ../scss/app.scss */
+  /* line 314, ../scss/app.scss */
   body {
     min-height: 100%;
     font-family: "Helvetica Neue",  Arial, "Lucida Grande", sans-serif;
     font-size: 8px;
   }
 
-  /* line 317, ../scss/app.scss */
+  /* line 320, ../scss/app.scss */
   .top-bar {
     opacity: 0.2;
   }
 
-  /* line 320, ../scss/app.scss */
+  /* line 323, ../scss/app.scss */
   .text-header {
     font-size: 20px;
     text-align: center;
   }
 
-  /* line 325, ../scss/app.scss */
+  /* line 328, ../scss/app.scss */
   h2 {
     font-size: 15px;
   }
 
-  /* line 332, ../scss/app.scss */
+  /* line 335, ../scss/app.scss */
   .logo {
     line-height: 1;
     verticle-align: middle;
   }
 
-  /* line 336, ../scss/app.scss */
+  /* line 339, ../scss/app.scss */
   .logoimg {
     height: 44px;
   }
 
-  /* line 340, ../scss/app.scss */
+  /* line 343, ../scss/app.scss */
   .row {
     padding-left: 0.625rem !important;
     padding-right: 0.625rem !important;
   }
 
-  /* line 346, ../scss/app.scss */
+  /* line 349, ../scss/app.scss */
   .text {
     display: table-cell;
     vertical-align: middle;
@@ -8086,18 +8086,18 @@ p {
     padding-top: 6.25rem;
   }
 
-  /* line 353, ../scss/app.scss */
+  /* line 356, ../scss/app.scss */
   .text-list {
     /*font-size:8px;       */
     font-family: 'helveticaneue-light-webfont';
   }
 
-  /* line 357, ../scss/app.scss */
+  /* line 360, ../scss/app.scss */
   .text-list li {
     list-style-image: url("../images/ico_dot.png");
   }
 
-  /* line 360, ../scss/app.scss */
+  /* line 363, ../scss/app.scss */
   .text p {
     font-family: 'helveticaneue-light-webfont';
     /*font-size:8px;*/

@@ -252,7 +252,10 @@ z-index: -500;
     padding-top:emCalc(0px);
     padding-bottom:emCalc(0px)
     
- }   
+ }  
+.time-line-centred-img1 img {
+    
+} 
 .center-img {
   display: table-cell;
   vertical-align: middle;   
@@ -268,7 +271,7 @@ border:solid thin red;
        display: table-cell;
        vertical-align: middle; 
        font-size:12px;       
-       padding-top:emCalc(100px);
+       padding-top:emCalc(60px);
     }
 
 .text-list {    
