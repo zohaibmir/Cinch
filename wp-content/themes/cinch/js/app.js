@@ -5,11 +5,117 @@ $(document).foundation();
 function CurrentMenuClick() {
     $('a[href*=#]').click(function() {
         $('.top-nav ul li.active').removeClass ('active');
-        $(this).parent().addClass('active');        
+        $(this).parent().attr('id');
+        $(this).parent().addClass('active');                
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
             && location.hostname == this.hostname) {
             var $target = $(this.hash);            
-            $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');            
+            $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');   
+            if(this.hash.slice(1) == "ourapp") {         
+                
+                $.when(
+                    $('#home-fixed-left').fadeOut(400),
+                    $('#home-fixed-right').fadeOut(400),
+                    $('#retailers-fixed-left').fadeOut(400),
+                    $('#retailers-fixed-right').fadeOut(400),
+                    $('#service-fixed-left').fadeOut(400),
+                    $('#service-fixed-right').fadeOut(400),
+                    $('#sdk-fixed-left').fadeOut(400),
+                    $('#sdk-fixed-right').fadeOut(400),
+                    $('#contact-fixed-left').fadeOut(400),
+                    $('#contact-fixed-right').fadeOut(400)
+                    ).done(function() {
+                    $('#ourapp-fixed-left').fadeIn(400);
+                    $('#ourapp-fixed-right').fadeIn(400);
+                });
+                
+                
+            }
+            else if(this.hash.slice(1) == "home") {       
+                $.when(
+                    $('#ourapp-fixed-left').fadeOut(400),
+                    $('#ourapp-fixed-right').fadeOut(400),
+                    $('#retailers-fixed-left').fadeOut(400),
+                    $('#retailers-fixed-right').fadeOut(400),
+                    $('#service-fixed-left').fadeOut(400),
+                    $('#service-fixed-right').fadeOut(400),
+                    $('#sdk-fixed-left').fadeOut(400),
+                    $('#sdk-fixed-right').fadeOut(400),
+                    $('#contact-fixed-left').fadeOut(400),
+                    $('#contact-fixed-right').fadeOut(400)
+                    ).done(function() {
+                    $('#home-fixed-left').fadeIn(400);
+                    $('#home-fixed-right').fadeIn(400);
+                });
+            }
+            else if(this.hash.slice(1) == "retailers") {       
+                $.when(
+                    $('#ourapp-fixed-left').fadeOut(400),
+                    $('#ourapp-fixed-right').fadeOut(400),                    
+                    $('#home-fixed-left').fadeOut(400),
+                    $('#home-fixed-right').fadeOut(400),
+                    $('#service-fixed-left').fadeOut(400),
+                    $('#service-fixed-right').fadeOut(400),
+                    $('#sdk-fixed-left').fadeOut(400),
+                    $('#sdk-fixed-right').fadeOut(400),
+                    $('#contact-fixed-left').fadeOut(400),
+                    $('#contact-fixed-right').fadeOut(400)
+                    ).done(function() {
+                    $('#retailers-fixed-left').fadeIn(400);
+                    $('#retailers-fixed-right').fadeIn(400);
+                });
+            }
+            else if(this.hash.slice(1) == "service") {       
+                $.when(
+                    $('#ourapp-fixed-left').fadeOut(400),
+                    $('#ourapp-fixed-right').fadeOut(400),                    
+                    $('#home-fixed-left').fadeOut(400),
+                    $('#home-fixed-right').fadeOut(400),
+                    $('#retailers-fixed-left').fadeOut(400),
+                    $('#retailers-fixed-right').fadeOut(400),
+                    $('#sdk-fixed-left').fadeOut(400),
+                    $('#sdk-fixed-right').fadeOut(400),
+                    $('#contact-fixed-left').fadeOut(400),
+                    $('#contact-fixed-right').fadeOut(400)
+                    ).done(function() {                    
+                    $('#service-fixed-left').fadeIn(400);
+                    $('#service-fixed-right').fadeIn(400);
+                });
+            }
+            else if(this.hash.slice(1) == "sdk") {       
+                $.when(
+                    $('#ourapp-fixed-left').fadeOut(400),
+                    $('#ourapp-fixed-right').fadeOut(400),                    
+                    $('#home-fixed-left').fadeOut(400),
+                    $('#home-fixed-right').fadeOut(400),
+                    $('#retailers-fixed-left').fadeOut(400),
+                    $('#retailers-fixed-right').fadeOut(400),
+                    $('#service-fixed-left').fadeOut(400),
+                    $('#service-fixed-right').fadeOut(400),                    
+                    $('#contact-fixed-left').fadeOut(400),
+                    $('#contact-fixed-right').fadeOut(400)
+                    ).done(function() {
+                    $('#sdk-fixed-left').fadeIn(400);
+                    $('#sdk-fixed-right').fadeIn(400);
+                });
+            }
+            else if(this.hash.slice(1) == "contact") {       
+                $.when(
+                    $('#ourapp-fixed-left').fadeOut(400),
+                    $('#ourapp-fixed-right').fadeOut(400),                    
+                    $('#home-fixed-left').fadeOut(400),
+                    $('#home-fixed-right').fadeOut(400),
+                    $('#retailers-fixed-left').fadeOut(400),
+                    $('#retailers-fixed-right').fadeOut(400),
+                    $('#service-fixed-left').fadeOut(400),
+                    $('#service-fixed-right').fadeOut(400),
+                    $('#sdk-fixed-left').fadeOut(400),
+                    $('#sdk-fixed-right').fadeOut(400)                                        
+                    ).done(function() {
+                    $('#contact-fixed-left').fadeIn(400);
+                    $('#contact-fixed-right').fadeIn(400);
+                });
+            }
             if ($target.length) {
                 var targetOffset = $target.offset().top;                
                 $('html,body')
@@ -33,19 +139,20 @@ function redrawDotNav(){
     var section6Top =  $('#contact').offset().top - (($(document).height() - $('#contact').offset().top) / 2);
     $('.nav0').addClass('active');
     if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){
-       
-        $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#contact-fixed-left').stop( true, true ).fadeOut(400);
-        $('#contact-fixed-right').stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#home-fixed-left').delay(100).fadeIn(3000);
-        $('#home-fixed-right').delay(100).fadeIn(3000);        
+        if($(window).width() < 800) {
+            $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#contact-fixed-left').stop( true, true ).fadeOut(400);
+            $('#contact-fixed-right').stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#home-fixed-left').delay(100).fadeIn(3000);
+            $('#home-fixed-right').delay(100).fadeIn(3000);   
+        }
         $(".bg-page-2").fadeOut(600);
         $('.nav0').addClass('active');        
         $('.nav1').removeClass('active');        
@@ -55,20 +162,20 @@ function redrawDotNav(){
         $('.nav5').removeClass('active');
     
     }else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
-        $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(4000);
-        $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(4000);
-        $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(4000);
-        $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(4000);
-        $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(4000);
-        $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(4000);
-        $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(4000);
-        $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(4000);
-        $('#contact-fixed-left').stop( true, true ).fadeOut(4000);
-        $('#contact-fixed-right').stop( true, true ).fadeOut(4000);
-        
-        
-        $('#ourapp-fixed-left').delay(100).fadeIn(3000);
-        $('#ourapp-fixed-right').delay(100).fadeIn(3000);
+        if($(window).width() < 800) {
+            $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(4000);
+            $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(4000);
+            $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(4000);
+            $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(4000);
+            $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(4000);
+            $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(4000);
+            $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(4000);
+            $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(4000);
+            $('#contact-fixed-left').stop( true, true ).fadeOut(4000);
+            $('#contact-fixed-right').stop( true, true ).fadeOut(4000);
+            $('#ourapp-fixed-left').delay(100).fadeIn(3000);
+            $('#ourapp-fixed-right').delay(100).fadeIn(3000);
+        }
         $(".bg-page-2").fadeIn(800);
         $('.nav1').addClass('active');
         $('.nav0').removeClass('active');
@@ -76,18 +183,20 @@ function redrawDotNav(){
         $('.nav3').removeClass('active');
         $('.nav4').removeClass('active');
         $('.nav5').removeClass('active');
-    } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){      
-        $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(400);        
-        $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(400);
-        $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(400);
-        $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(400);        
-        
-        $('#retailers-fixed-left').delay(100).fadeIn(3000);
-        $('#retailers-fixed-right').delay(100).fadeIn(3000);
+    } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){ 
+        if($(window).width() < 800) {
+            $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(400);        
+            $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(400);
+            $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(400);
+            $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(400);        
+                
+            $('#retailers-fixed-left').delay(100).fadeIn(3000);
+            $('#retailers-fixed-right').delay(100).fadeIn(3000);
+        }
         $('.nav2').addClass('active');
         $('.nav0').removeClass('active');
         $('.nav1').removeClass('active');
@@ -95,18 +204,20 @@ function redrawDotNav(){
         $('.nav4').removeClass('active');
         $('.nav5').removeClass('active');
     } else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){        
-        $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(400);
-        $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(400);        
-        
-        
-        $('#service-fixed-left').delay(100).fadeIn(3000);
-        $('#service-fixed-right').delay(100).fadeIn(3000);
+        if($(window).width() < 800) {
+            $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(400);
+            $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(400);        
+                
+                
+            $('#service-fixed-left').delay(100).fadeIn(3000);
+            $('#service-fixed-right').delay(100).fadeIn(3000);
+        }
         $('.nav3').addClass('active');
         $('.nav0').removeClass('active');
         $('.nav1').removeClass('active');
@@ -114,20 +225,22 @@ function redrawDotNav(){
         $('.nav4').removeClass('active');
         $('.nav5').removeClass('active');
     } else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){        
-        $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#contact-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#contact-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);        
-        $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(400);
-        $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(400);
-        $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        
-        
-        $('#sdk-fixed-left').delay(100).fadeIn(3000);
-        $('#sdk-fixed-right').delay(100).fadeIn(3000);
+        if($(window).width() < 800) {
+            $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#contact-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#contact-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);        
+            $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(400);
+            $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(400);
+            $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+                
+                
+            $('#sdk-fixed-left').delay(100).fadeIn(3000);
+            $('#sdk-fixed-right').delay(100).fadeIn(3000);
+        }
         
         $('.nav4').addClass('active');
         $('.nav0').removeClass('active');
@@ -136,21 +249,23 @@ function redrawDotNav(){
         $('.nav3').removeClass('active');        
         $('.nav5').removeClass('active');
     } else if ($(document).scrollTop() >= section6Top){                
-        $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(400);        
-        $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(400);
-        $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(400);
-        $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
-        $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(400);
-        
-        
-        
-        $('#contact-fixed-left').delay(100).fadeIn(3000);
-        $('#contact-fixed-right').delay(100).fadeIn(3000)        
+        if($(window).width() < 800) {
+            $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#sdk-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#ourapp-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+            $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#service-fixed-right').delay(100).stop( true, true ).fadeOut(400);        
+            $('#home-fixed-left').delay(100).delay(100).stop( true, true ).fadeOut(400);
+            $('#home-fixed-right').delay(100).delay(100).stop( true, true ).fadeOut(400);
+            $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
+            $('#retailers-fixed-right').delay(100).stop( true, true ).fadeOut(400);
+                
+                
+                
+            $('#contact-fixed-left').delay(100).fadeIn(3000);
+            $('#contact-fixed-right').delay(100).fadeIn(3000)        
+        }
         $('.nav5').addClass('active');
         $('.nav0').removeClass('active');
         $('.nav1').removeClass('active');

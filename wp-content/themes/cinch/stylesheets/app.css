@@ -7851,7 +7851,7 @@ p {
 }
 
 /* line 145, ../scss/app.scss */
-.top-nav .nav li:first-child {
+.top-nav ul li:first-child {
   display: none;
 }
 
@@ -7863,6 +7863,11 @@ p {
 }
 
 /* line 155, ../scss/app.scss */
+.top-bar-section ul li:first-child {
+  display: none;
+}
+
+/* line 158, ../scss/app.scss */
 .bg-page {
   background: url("../images/bg.png") center center no-repeat fixed;
   -webkit-background-size: cover;
@@ -7877,7 +7882,7 @@ p {
   z-index: -500;
 }
 
-/* line 169, ../scss/app.scss */
+/* line 172, ../scss/app.scss */
 .bg-page-2 {
   background: url("../images/bg2.png") center no-repeat fixed;
   -webkit-background-size: cover;
@@ -7887,7 +7892,7 @@ p {
   display: none;
 }
 
-/* line 178, ../scss/app.scss */
+/* line 181, ../scss/app.scss */
 #home {
   /* background: url('../images/bg.png') center center no-repeat fixed; 	  
    -webkit-background-size: cover;
@@ -7900,7 +7905,7 @@ p {
   width: 100%;
   position: relative;
 }
-/* line 189, ../scss/app.scss */
+/* line 192, ../scss/app.scss */
 #home article {
   position: absolute;
   z-index: 1;
@@ -7910,7 +7915,7 @@ p {
   padding-top: 0;
 }
 
-/* line 199, ../scss/app.scss */
+/* line 202, ../scss/app.scss */
 #ourapp, #retailers, #service, #sdk, #contact {
   /*  background: url('../images/bg2.png') center no-repeat fixed; 	  
    -webkit-background-size: cover;
@@ -7923,7 +7928,7 @@ p {
   width: 100%;
   position: relative;
 }
-/* line 210, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 #ourapp article, #retailers article, #service article, #sdk article, #contact article {
   position: absolute;
   z-index: 1;
@@ -7933,7 +7938,7 @@ p {
   padding-top: 0;
 }
 
-/* line 220, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .vcentere-content, .vcentere-content1 {
   display: table;
   position: relative;
@@ -7941,7 +7946,7 @@ p {
   table-layout: fixed;
 }
 
-/* line 226, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 .fixed-div {
   display: table;
   position: fixed;
@@ -7949,7 +7954,7 @@ p {
   top: 0;
 }
 
-/* line 233, ../scss/app.scss */
+/* line 236, ../scss/app.scss */
 .time-line-centred-img {
   overflow: no-content;
   display: table-cell;
@@ -7962,7 +7967,7 @@ p {
   padding-bottom: 6.25rem;
 }
 
-/* line 245, ../scss/app.scss */
+/* line 248, ../scss/app.scss */
 .time-line-centred-img1 {
   display: table-cell;
   vertical-align: middle;
@@ -7974,7 +7979,7 @@ p {
   padding-bottom: 0;
 }
 
-/* line 259, ../scss/app.scss */
+/* line 262, ../scss/app.scss */
 .center-img {
   display: table-cell;
   vertical-align: middle;
@@ -7982,13 +7987,13 @@ p {
   border: solid thin red;
 }
 
-/* line 266, ../scss/app.scss */
+/* line 269, ../scss/app.scss */
 #home-text img {
   width: 100%;
   text-align: center;
 }
 
-/* line 270, ../scss/app.scss */
+/* line 273, ../scss/app.scss */
 .text {
   display: table-cell;
   vertical-align: middle;
@@ -7996,89 +8001,89 @@ p {
   padding-top: 3.75rem;
 }
 
-/* line 277, ../scss/app.scss */
+/* line 280, ../scss/app.scss */
 .text-list {
   font-size: 12px;
   font-family: 'helveticaneue-light-webfont';
 }
 
-/* line 281, ../scss/app.scss */
+/* line 284, ../scss/app.scss */
 .text-list li {
   list-style-image: url("../images/ico_dot.png");
 }
 
-/* line 284, ../scss/app.scss */
+/* line 287, ../scss/app.scss */
 .text p {
   font-family: 'helveticaneue-light-webfont';
   font-size: 12px;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 290, ../scss/app.scss */
+  /* line 293, ../scss/app.scss */
   .text-header {
     font-size: 40px;
     text-align: center;
   }
 
-  /* line 297, ../scss/app.scss */
+  /* line 300, ../scss/app.scss */
   .row {
     padding-left: 0.625rem !important;
     padding-right: 0.625rem !important;
   }
 
-  /* line 301, ../scss/app.scss */
+  /* line 304, ../scss/app.scss */
   .top-nav .nav li {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
-  /* line 306, ../scss/app.scss */
+  /* line 309, ../scss/app.scss */
   .top-nav .nav li:last-child {
     padding-right: 0.3125rem;
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 314, ../scss/app.scss */
+  /* line 317, ../scss/app.scss */
   body {
     min-height: 100%;
     font-family: "Helvetica Neue",  Arial, "Lucida Grande", sans-serif;
     font-size: 8px;
   }
 
-  /* line 320, ../scss/app.scss */
+  /* line 323, ../scss/app.scss */
   .top-bar {
     opacity: 0.2;
   }
 
-  /* line 323, ../scss/app.scss */
+  /* line 326, ../scss/app.scss */
   .text-header {
     font-size: 20px;
     text-align: center;
   }
 
-  /* line 328, ../scss/app.scss */
+  /* line 331, ../scss/app.scss */
   h2 {
     font-size: 15px;
   }
 
-  /* line 335, ../scss/app.scss */
+  /* line 338, ../scss/app.scss */
   .logo {
     line-height: 1;
     verticle-align: middle;
   }
 
-  /* line 339, ../scss/app.scss */
+  /* line 342, ../scss/app.scss */
   .logoimg {
     height: 44px;
   }
 
-  /* line 343, ../scss/app.scss */
+  /* line 346, ../scss/app.scss */
   .row {
     padding-left: 0.625rem !important;
     padding-right: 0.625rem !important;
   }
 
-  /* line 349, ../scss/app.scss */
+  /* line 352, ../scss/app.scss */
   .text {
     display: table-cell;
     vertical-align: middle;
@@ -8086,18 +8091,18 @@ p {
     padding-top: 6.25rem;
   }
 
-  /* line 356, ../scss/app.scss */
+  /* line 359, ../scss/app.scss */
   .text-list {
     /*font-size:8px;       */
     font-family: 'helveticaneue-light-webfont';
   }
 
-  /* line 360, ../scss/app.scss */
+  /* line 363, ../scss/app.scss */
   .text-list li {
     list-style-image: url("../images/ico_dot.png");
   }
 
-  /* line 363, ../scss/app.scss */
+  /* line 366, ../scss/app.scss */
   .text p {
     font-family: 'helveticaneue-light-webfont';
     /*font-size:8px;*/

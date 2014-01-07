@@ -29,8 +29,11 @@
                 </ul>
 
                 <section class="top-bar-section">
+                    <?php wp_nav_menu(array('theme_location' => 'mainnav', 'container' => 'div',
+                            'container_class' => 'top-nav',
+                            'container_id' => '',  'menu_class' => 'left nav', 'menu_class' => 'left', 'menu_id' => 'nav')); ?>                             
                     <!-- Left Nav Section -->
-                    <ul class="left">                        
+                    <!--ul class="left">                        
                         <li><a href="#ourapp" >Our App</a></li>
                         <li class="divider"></li>
                         <li><a href="#retailers">Retailers</a></li>
@@ -40,7 +43,7 @@
                         <li><a href="#sdk">Cinch Mobile SDK</a></li>
                         <li class="divider"></li>
                         <li><a href="#contact">Contact</a></li>
-                    </ul>
+                    </ul-->
                 </section>
             </nav>
             <div class="row show-for-medium-up" >

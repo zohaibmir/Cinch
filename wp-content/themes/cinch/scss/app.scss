@@ -142,7 +142,7 @@ p {
 
 }
 
-.top-nav .nav li:first-child{
+.top-nav ul li:first-child{
 	display: none;
 }
 
@@ -152,6 +152,9 @@ p {
 	text-decoration: none;
 }
 
+.top-bar-section ul li:first-child{
+	display: none;
+} 
 .bg-page {
 background: url('../images/bg.png') center center no-repeat fixed; 	  
 -webkit-background-size: cover;
@@ -299,8 +302,8 @@ border:solid thin red;
     padding-right:emCalc(10)!important;    
 }
 .top-nav .nav li{
-    padding-left:emCalc(10);
-    padding-right:emCalc(10);    
+    padding-left:emCalc(20);
+    padding-right:emCalc(20);    
 }
 
  .top-nav .nav li:last-child  {
