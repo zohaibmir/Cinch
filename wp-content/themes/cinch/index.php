@@ -19,7 +19,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                         <div class="text">
                             <center>
                                 <img src="<?php echo get('page_group_leftimage_image', 1); ?>" alt="H2"/>                                
-                                <h2 class="text-header2"><?php echo get('page_group_leftimage_caption', 1); ?></h2>
+                                <a href="#ourapp"><h2 class="text-header2"><?php echo get('page_group_leftimage_caption', 1); ?></h2></a>
                             </center> 
                         </div>
                     </div>
@@ -40,7 +40,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                         <div class="text" id="home-text">
                             <center>
                                 <img src="<?php echo get('page_group_rightimage_image', 1); ?>" alt="H2" />
-                                <h2 class="text-header2"><?php echo get('page_group_rightimage_caption', 1); ?></h2>
+                                <a href="#retailers"><h2 class="text-header2"><?php echo get('page_group_rightimage_caption', 1); ?></h2></a>
                             </center>
                         </div>
                     </div>

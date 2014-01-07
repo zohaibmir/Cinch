@@ -142,6 +142,13 @@ function no_update_notification() {
 
 add_action('admin_notices', 'no_update_notification', 1);
 
+
+$args = array(
+	'default-color' => '000000',
+	'default-image' => get_template_directory_uri() . '/images/bg1.png',
+);
+add_theme_support( 'custom-background', $args );
+
 /*
  *  Remove unnecessary dashboard widgets
  *  Date: 2013-03-07

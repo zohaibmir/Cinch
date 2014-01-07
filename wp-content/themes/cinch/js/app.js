@@ -4,15 +4,18 @@ $(document).foundation();
 
 function CurrentMenuClick() {
     $('a[href*=#]').click(function() {
+        if($(this).parent().hasClass('menu-icon'))  {
+            
+        }
+        else {
         $('.top-nav ul li.active').removeClass ('active');
-        $(this).parent().attr('id');
-        $(this).parent().addClass('active');                
+        $(this).parent().addClass('active');        
+        }
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
             && location.hostname == this.hostname) {
             var $target = $(this.hash);            
             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');   
-            if(this.hash.slice(1) == "ourapp") {         
-                
+            if(this.hash.slice(1) == "ourapp") {                             
                 $.when(
                     $('#home-fixed-left').fadeOut(400),
                     $('#home-fixed-right').fadeOut(400),
@@ -154,12 +157,12 @@ function redrawDotNav(){
             $('#home-fixed-right').delay(100).fadeIn(3000);   
         }
         $(".bg-page-2").fadeOut(600);
-        $('.nav0').addClass('active');        
-        $('.nav1').removeClass('active');        
-        $('.nav2').removeClass('active');
-        $('.nav3').removeClass('active');
-        $('.nav4').removeClass('active');
-        $('.nav5').removeClass('active');
+        $('#menu-item-44').addClass('active');        
+        $('#menu-item-43').removeClass('active');        
+        $('#menu-item-38').removeClass('active');
+        $('#menu-item-39').removeClass('active');
+        $('#menu-item-40').removeClass('active');
+        $('#menu-item-41').removeClass('active');
     
     }else if ($(document).scrollTop() >= section2Top && $(document).scrollTop() < section3Top){
         if($(window).width() < 800) {
@@ -177,12 +180,12 @@ function redrawDotNav(){
             $('#ourapp-fixed-right').delay(100).fadeIn(3000);
         }
         $(".bg-page-2").fadeIn(800);
-        $('.nav1').addClass('active');
-        $('.nav0').removeClass('active');
-        $('.nav2').removeClass('active');
-        $('.nav3').removeClass('active');
-        $('.nav4').removeClass('active');
-        $('.nav5').removeClass('active');
+        $('#menu-item-44').removeClass('active');        
+        $('#menu-item-43').addClass('active');        
+        $('#menu-item-38').removeClass('active');
+        $('#menu-item-39').removeClass('active');
+        $('#menu-item-40').removeClass('active');
+        $('#menu-item-41').removeClass('active');        
     } else if ($(document).scrollTop() >= section3Top && $(document).scrollTop() < section4Top){ 
         if($(window).width() < 800) {
             $('#ourapp-fixed-left').delay(100).stop( true, true ).fadeOut(400);
@@ -197,12 +200,13 @@ function redrawDotNav(){
             $('#retailers-fixed-left').delay(100).fadeIn(3000);
             $('#retailers-fixed-right').delay(100).fadeIn(3000);
         }
-        $('.nav2').addClass('active');
-        $('.nav0').removeClass('active');
-        $('.nav1').removeClass('active');
-        $('.nav3').removeClass('active');
-        $('.nav4').removeClass('active');
-        $('.nav5').removeClass('active');
+       
+        $('#menu-item-44').removeClass('active');        
+        $('#menu-item-43').removeClass('active');        
+        $('#menu-item-38').addClass('active');
+        $('#menu-item-39').removeClass('active');
+        $('#menu-item-40').removeClass('active');
+        $('#menu-item-41').removeClass('active');
     } else if ($(document).scrollTop() >= section4Top && $(document).scrollTop() < section5Top){        
         if($(window).width() < 800) {
             $('#retailers-fixed-left').delay(100).stop( true, true ).fadeOut(400);
@@ -218,12 +222,13 @@ function redrawDotNav(){
             $('#service-fixed-left').delay(100).fadeIn(3000);
             $('#service-fixed-right').delay(100).fadeIn(3000);
         }
-        $('.nav3').addClass('active');
-        $('.nav0').removeClass('active');
-        $('.nav1').removeClass('active');
-        $('.nav2').removeClass('active');
-        $('.nav4').removeClass('active');
-        $('.nav5').removeClass('active');
+       
+        $('#menu-item-44').removeClass('active');        
+        $('#menu-item-43').removeClass('active');        
+        $('#menu-item-38').removeClass('active');
+        $('#menu-item-39').addClass('active');
+        $('#menu-item-40').removeClass('active');
+        $('#menu-item-41').removeClass('active');
     } else if ($(document).scrollTop() >= section5Top && $(document).scrollTop() < section6Top){        
         if($(window).width() < 800) {
             $('#service-fixed-left').delay(100).stop( true, true ).fadeOut(400);
@@ -242,12 +247,13 @@ function redrawDotNav(){
             $('#sdk-fixed-right').delay(100).fadeIn(3000);
         }
         
-        $('.nav4').addClass('active');
-        $('.nav0').removeClass('active');
-        $('.nav1').removeClass('active');
-        $('.nav2').removeClass('active');
-        $('.nav3').removeClass('active');        
-        $('.nav5').removeClass('active');
+    
+        $('#menu-item-44').removeClass('active');        
+        $('#menu-item-43').removeClass('active');        
+        $('#menu-item-38').removeClass('active');
+        $('#menu-item-39').removeClass('active');
+        $('#menu-item-40').addClass('active');
+        $('#menu-item-41').removeClass('active');
     } else if ($(document).scrollTop() >= section6Top){                
         if($(window).width() < 800) {
             $('#sdk-fixed-left').delay(100).stop( true, true ).fadeOut(400);
@@ -266,12 +272,12 @@ function redrawDotNav(){
             $('#contact-fixed-left').delay(100).fadeIn(3000);
             $('#contact-fixed-right').delay(100).fadeIn(3000)        
         }
-        $('.nav5').addClass('active');
-        $('.nav0').removeClass('active');
-        $('.nav1').removeClass('active');
-        $('.nav2').removeClass('active');
-        $('.nav3').removeClass('active');
-        $('.nav4').removeClass('active');        
+        $('#menu-item-44').removeClass('active');        
+        $('#menu-item-43').removeClass('active');        
+        $('#menu-item-38').removeClass('active');
+        $('#menu-item-39').removeClass('active');
+        $('#menu-item-40').removeClass('active');
+        $('#menu-item-41').addClass('active');     
     }
 }
 
