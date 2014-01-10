@@ -35,8 +35,8 @@
 
         foreach ($myposts as $post) : setup_postdata($post);
             ?>
-            <section class="bg-page bg-page-1" style="background: url('<?php echo get('post_background_images_background1', 1); ?>') center center no-repeat fixed; 	"> </section>
-            <section class="bg-page bg-page-2" style="background: url('<?php echo get('post_background_images_background2', 1); ?>') center no-repeat fixed;display: none;"></section>
+            <section class="bg-page bg-page-1" style="background: url('<?php echo get('post_background_images_background1', 1); ?>')"> </section>
+            <section class="bg-page bg-page-2" style="background: url('<?php echo get('post_background_images_background2', 1); ?>');display: none;"></section>
             <?php
         endforeach;
         wp_reset_postdata();

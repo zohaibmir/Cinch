@@ -7869,7 +7869,8 @@ p {
 
 /* line 158, ../scss/app.scss */
 .bg-page {
-  background: url("../images/bg.png") center center no-repeat fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
@@ -7882,9 +7883,10 @@ p {
   z-index: -500;
 }
 
-/* line 172, ../scss/app.scss */
+/* line 173, ../scss/app.scss */
 .bg-page-2 {
-  background: url("../images/bg2.png") center no-repeat fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
@@ -7892,7 +7894,7 @@ p {
   display: none;
 }
 
-/* line 181, ../scss/app.scss */
+/* line 183, ../scss/app.scss */
 #home {
   /* background: url('../images/bg.png') center center no-repeat fixed; 	  
    -webkit-background-size: cover;
@@ -7905,7 +7907,7 @@ p {
   width: 100%;
   position: relative;
 }
-/* line 192, ../scss/app.scss */
+/* line 194, ../scss/app.scss */
 #home article {
   position: absolute;
   z-index: 1;
@@ -7915,7 +7917,7 @@ p {
   padding-top: 0;
 }
 
-/* line 202, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
 #ourapp, #retailers, #service, #sdk, #contact {
   /*  background: url('../images/bg2.png') center no-repeat fixed; 	  
    -webkit-background-size: cover;
@@ -7928,7 +7930,7 @@ p {
   width: 100%;
   position: relative;
 }
-/* line 213, ../scss/app.scss */
+/* line 215, ../scss/app.scss */
 #ourapp article, #retailers article, #service article, #sdk article, #contact article {
   position: absolute;
   z-index: 1;
@@ -7938,7 +7940,7 @@ p {
   padding-top: 0;
 }
 
-/* line 223, ../scss/app.scss */
+/* line 225, ../scss/app.scss */
 .vcentere-content, .vcentere-content1 {
   display: table;
   position: relative;
@@ -7946,7 +7948,7 @@ p {
   table-layout: fixed;
 }
 
-/* line 229, ../scss/app.scss */
+/* line 231, ../scss/app.scss */
 .fixed-div {
   display: table;
   position: fixed;
@@ -7954,7 +7956,7 @@ p {
   top: 0;
 }
 
-/* line 236, ../scss/app.scss */
+/* line 238, ../scss/app.scss */
 .time-line-centred-img {
   overflow: no-content;
   display: table-cell;
@@ -7967,7 +7969,7 @@ p {
   padding-bottom: 6.25rem;
 }
 
-/* line 248, ../scss/app.scss */
+/* line 250, ../scss/app.scss */
 .time-line-centred-img1 {
   display: table-cell;
   vertical-align: middle;
@@ -7979,7 +7981,7 @@ p {
   padding-bottom: 0;
 }
 
-/* line 262, ../scss/app.scss */
+/* line 264, ../scss/app.scss */
 .center-img {
   display: table-cell;
   vertical-align: middle;
@@ -7987,13 +7989,13 @@ p {
   border: solid thin red;
 }
 
-/* line 269, ../scss/app.scss */
+/* line 271, ../scss/app.scss */
 #home-text img {
   width: 100%;
   text-align: center;
 }
 
-/* line 273, ../scss/app.scss */
+/* line 275, ../scss/app.scss */
 .text {
   display: table-cell;
   vertical-align: middle;
@@ -8001,89 +8003,115 @@ p {
   padding-top: 3.75rem;
 }
 
-/* line 280, ../scss/app.scss */
+/* line 282, ../scss/app.scss */
 .text-list {
   font-size: 12px;
   font-family: 'helveticaneue-light-webfont';
 }
 
-/* line 284, ../scss/app.scss */
+/* line 286, ../scss/app.scss */
 .text-list li {
   list-style-image: url("../images/ico_dot.png");
 }
 
-/* line 287, ../scss/app.scss */
+/* line 289, ../scss/app.scss */
 .text p {
   font-family: 'helveticaneue-light-webfont';
   font-size: 12px;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 293, ../scss/app.scss */
+  /* line 295, ../scss/app.scss */
   .text-header {
     font-size: 40px;
     text-align: center;
   }
 
-  /* line 300, ../scss/app.scss */
+  /* line 302, ../scss/app.scss */
   .row {
     padding-left: 0.625rem !important;
     padding-right: 0.625rem !important;
   }
 
-  /* line 304, ../scss/app.scss */
+  /* line 306, ../scss/app.scss */
   .top-nav .nav li {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
 
-  /* line 309, ../scss/app.scss */
+  /* line 311, ../scss/app.scss */
   .top-nav .nav li:last-child {
     padding-right: 0.3125rem;
   }
+
+  /* line 316, ../scss/app.scss */
+  .bg-page {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  /* line 328, ../scss/app.scss */
+  .bg-page-2 {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
 }
 @media only screen and (max-width: 40em) {
-  /* line 317, ../scss/app.scss */
+  /* line 344, ../scss/app.scss */
   body {
     min-height: 100%;
     font-family: "Helvetica Neue",  Arial, "Lucida Grande", sans-serif;
     font-size: 8px;
   }
 
-  /* line 323, ../scss/app.scss */
+  /* line 350, ../scss/app.scss */
   .top-bar {
     opacity: 0.2;
   }
 
-  /* line 326, ../scss/app.scss */
+  /* line 353, ../scss/app.scss */
   .text-header {
     font-size: 20px;
     text-align: center;
   }
 
-  /* line 331, ../scss/app.scss */
+  /* line 358, ../scss/app.scss */
   h2 {
     font-size: 15px;
   }
 
-  /* line 338, ../scss/app.scss */
+  /* line 365, ../scss/app.scss */
   .logo {
     line-height: 1;
     verticle-align: middle;
   }
 
-  /* line 342, ../scss/app.scss */
+  /* line 369, ../scss/app.scss */
   .logoimg {
     height: 44px;
   }
 
-  /* line 346, ../scss/app.scss */
+  /* line 373, ../scss/app.scss */
   .row {
     padding-left: 0.625rem !important;
     padding-right: 0.625rem !important;
   }
 
-  /* line 352, ../scss/app.scss */
+  /* line 379, ../scss/app.scss */
   .text {
     display: table-cell;
     vertical-align: middle;
@@ -8091,18 +8119,18 @@ p {
     padding-top: 6.25rem;
   }
 
-  /* line 359, ../scss/app.scss */
+  /* line 386, ../scss/app.scss */
   .text-list {
     /*font-size:8px;       */
     font-family: 'helveticaneue-light-webfont';
   }
 
-  /* line 363, ../scss/app.scss */
+  /* line 390, ../scss/app.scss */
   .text-list li {
     list-style-image: url("../images/ico_dot.png");
   }
 
-  /* line 366, ../scss/app.scss */
+  /* line 393, ../scss/app.scss */
   .text p {
     font-family: 'helveticaneue-light-webfont';
     /*font-size:8px;*/

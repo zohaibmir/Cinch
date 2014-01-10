@@ -156,7 +156,8 @@ p {
 	display: none;
 } 
 .bg-page {
-background: url('../images/bg.png') center center no-repeat fixed; 	  
+background-position:center;
+background-repeat:no-repeat;
 -webkit-background-size: cover !important;
 -moz-background-size: cover !important;
 -o-background-size: cover !important;
@@ -169,8 +170,9 @@ top: 0;
 z-index: -500;
 }
 
-.bg-page-2 {
-    background: url('../images/bg2.png') center no-repeat fixed; 	  
+.bg-page-2 {    
+    background-position:center;
+    background-repeat:no-repeat;
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     -o-background-size: cover !important;
@@ -302,12 +304,37 @@ border:solid thin red;
     padding-right:emCalc(10)!important;    
 }
 .top-nav .nav li{
-    padding-left:emCalc(20);
-    padding-right:emCalc(20);    
+    padding-left:emCalc(10);
+    padding-right:emCalc(10);    
 }
 
  .top-nav .nav li:last-child  {
        padding-right:emCalc(5);
+}
+
+
+.bg-page {   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.bg-page-2 {   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
 }
 }
 
